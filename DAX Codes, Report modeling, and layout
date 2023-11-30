@@ -30,7 +30,5 @@ For modeling, I create a simple star schema with one-to-many relationships betwe
 date "between" slicer for sessions. Athlete Name, however, was used by both sessions and historical max tables. 
 
 
-
-
 In terms of layout, I will not go into too much details regarding formatting visuals and how to create reports to captivate your audience. I recommnded taking the Microsoft Power BI Data Analyst
 Professional Certificate courses on Coursera to get the most comprehensive knowledge on everything Power BI. 
