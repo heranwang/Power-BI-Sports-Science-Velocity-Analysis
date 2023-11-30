@@ -4,7 +4,7 @@ More details are coming soon.
 
 Please see the screenshot of the report below, which tracks how session max velocity (measured by Catapult Vector S7) trends across a given period of a player (data points have been randomized). That trend is then compared with their profile max velocity, which was set and then adjusted at certain time stamps based on session max velocity trends. All data and dashbaord formatting have been modifed for achieving anonymity.
 
-The project is a remake of the report above, using randomnized velocity data with unamed athletes. We will be connecting a local Excel file to Power BI for this demonstration. In my acutal work setting, I was able to use the Power BI Web connector to directly connect to our Athlete Management System (Smartabase). I will include the webpage with web connector direction in this repository.
+The project is a remake report using randomnized velocity data with unamed athletes. We will be connecting a local Excel file to Power BI for this demonstration. In my acutal work setting, I was able to use the Power BI Web connector to directly connect to our Athlete Management System (Smartabase). I will include the webpage with web connector direction in this repository.
 
 Overall, the repository will include:
 
