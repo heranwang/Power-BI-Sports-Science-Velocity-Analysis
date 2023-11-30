@@ -1,6 +1,5 @@
 # Power-BI-Sports-Science-Report-Max-Velocity-Tracking
 
-More details are coming soon.
 
 Please see the screenshot of the report below, which tracks how session max velocity (measured by Catapult Vector S7) trends across a given period of a player (data points have been randomized). That trend is then compared with their profile max velocity, which was set and then adjusted at certain time stamps based on session max velocity trends. All data and dashbaord formatting have been modifed for achieving anonymity.
 
