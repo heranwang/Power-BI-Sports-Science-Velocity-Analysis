@@ -1,2 +1,30 @@
-DAX Codes created and used in the PBI report
+#DAX Codes created and used in the PBI report: 
+
+1. To avoid PBI skipping duplicates in max velocity averages, the code below creates a calculated colunmn with random digits between 0 to 0.001 added to the current max velocity.
+Since we are rounding session max velocity to the tenth decimal place, the added random digits will not significantly affect the actual value. Same values can now be ranked differently
+by Power BI instead of considering them ties. The code for the calculated column is below:
+
+  no_ties = 'Sessions'[Session Max Velocity] + RAND()*0.001
+
+2. Since the filter pane of Power BI is able to filter by TOPN, we won't have to create additional measures filtering top values of a column. However, what if I want to exclude the best
+value and create an average between the second best to the nth best values, to compare with the topn averge value? This is where the measure below will come in handy. The measure below
+excludes the best (Top 1) value, and average the 2nd to 4th best max velocities:
+
+
+  top_vel_excluded = CALCULATE(AVERAGE('Sessions'[no_ties]), 
+                          FILTER(
+                                  TOPN(4,'Sessions','Sessions'[no_ties]),
+                                      'Sessions'[no_ties] <> MAX('Sessions'[no_ties])
+       ))
+
+
+Similarly, the same can be achieved with:
+
+
+  top2to4 = 
+  var sumtop4 = CALCULATE(SUM('Sessions'[no_ties]),TOPN(4,'Sessions','Sessions'[no_ties]))
+  RETURN DIVIDE(sumtop4 - max('Sessions'[no_ties]),3)
+
+
+
 
