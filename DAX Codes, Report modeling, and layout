@@ -26,5 +26,5 @@ Similarly, the same can be achieved with:
   RETURN DIVIDE(sumtop4 - max('Sessions'[no_ties]),3)
 
 
-I
-
+In terms of layout, I will not go into too much details regarding formatting visuals and how to create reports to captivate your audience. I recommnded taking the Microsoft Power BI Data Analyst
+Professional Certificate courses on Coursera to get the most comprehensive knowledge on everything Power BI. 
