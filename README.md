@@ -10,7 +10,7 @@ Overall, the repository will include:
 1. This README file
 2. Athlete Max Velocity Excel file
 3. DAX Codes of all measures created
-4. Power BI file of the main Dashboard
+4. PDF of main Power BI report with data ETL instructions
 5. Smartabase PBI Web connector directions
 
 
