@@ -25,6 +25,15 @@ Similarly, the same can be achieved with:
   var sumtop4 = CALCULATE(SUM('Sessions'[no_ties]),TOPN(4,'Sessions','Sessions'[no_ties]))
   RETURN DIVIDE(sumtop4 - max('Sessions'[no_ties]),3)
 
+3. Create a measure for dynamically changing gauge fill colors.
+
+    Color = IF(
+              SUM(
+                Sessions[Session Max Velocity]) > SUM('Sessions'[Profile Max Velocity]),
+                "#15CAB6",
+                "#E85E76")
+
+Gauge colors can be conditionally formatted with this measure when choosing it as the "field value".
 
 For modeling, I create a simple star schema with one-to-many relationships between PlayerID. I opted to not add a date table since this dataset was quite small, and I only needed a simple
 date "between" slicer for sessions. Athlete Name, however, was used by both sessions and historical max tables. 
